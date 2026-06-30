@@ -53,5 +53,13 @@ absolute and risk-adjusted terms.
   convention, not by optimization. Optimizing on this dataset would introduce
   lookahead bias.
 
+## What I'd Do Differently
+Starting over, I'd change three things. 
+
+- First, I'd stop treating a single backtest on a single asset as meaningful evidence — one clean-looking result on SPY proves almost nothing, so I'd test across multiple assets and distinct market regimes (e.g. a sideways decade like the 2000s, not just the 2015–2024 bull market) to see whether the strategy holds up or whether I just got a flattering window.
+-  Second, I'd build out-of-sample / walk-forward validation from the start rather than reporting in-sample numbers, since the real question isn't "did this work on history" but "would it have worked on data I hadn't seen."
+-  Third, I'd separate the signal logic from the cost and execution assumptions more cleanly, so I could stress-test slippage and transaction-cost sensitivity independently instead of baking one fixed assumption into the engine.
+-  More broadly, the project taught me to be suspicious of my own results. The most useful output here wasn't the strategy — it was confirming that a conventional, un-optimized MA crossover underperforms, which is a more honest finding than a tuned strategy that looks good only because it was fit to the same data I tested it on.
+
 
 
