@@ -52,6 +52,6 @@ absolute and risk-adjusted terms.
 - **No parameter optimization**: short/long window sizes (50/200) were chosen by
   convention, not by optimization. Optimizing on this dataset would introduce
   lookahead bias.
-Make that change in README.md, save it, and let me know when done!
+
 
 
